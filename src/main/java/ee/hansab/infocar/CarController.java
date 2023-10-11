@@ -10,17 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/cars")
 @RequiredArgsConstructor
 public class CarController {
     private final CarService service;
 
-    @GetMapping
+    @GetMapping("/cars")
     public Collection<Car> find(FindCarsRequest request) {
         return service.find(request);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/cars/{id}")
     public Car findById(@PathVariable long id) {
         return service.findById(id);
     }

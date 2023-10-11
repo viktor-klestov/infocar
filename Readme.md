@@ -1,0 +1,2 @@
+Frontend is prebuilt in ./src/main/resources/static , while its source code is located in ./frontend/infocar/src
+In order to run the service you need to start database first. In this directory ```docker compose run -d``` and then you can run service.
